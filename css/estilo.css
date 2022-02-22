@@ -33,7 +33,7 @@ a{
 .conteiner{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 120px calc(100% - 120px - 100px) 100px;
+    grid-template-rows: 120px calc(100% - 120px - 200px) 200px;
     grid-auto-flow: column;
     grid-template-areas: "encabezado"
                          "main"
@@ -46,7 +46,7 @@ a{
 .conteiner_servicios{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 120px calc(100% - 120px - 100px) 100px;
+    grid-template-rows: 120px calc(100% - 120px - 200px) 200px;
     grid-auto-flow: row;
     grid-template-areas:"encabezado encabezado"
                         "servicios_section_descripcion servicios_section_video"
@@ -137,6 +137,7 @@ a{
     width: 100%;
     padding: 5px;
     text-align: left;
+    transition: all 1s;
 }
 
 .encabezado_nav_items_boton:hover{
@@ -152,11 +153,16 @@ a{
 .encabezado_redes_icon{
     display: inline-block;
     border-radius: 10px;
-    padding: 2px 3px 0px 10px;   
+    padding: 2px 3px 0px 10px;  
+    transition: all 1s; 
 }
 
-.encabezado_redes_icon:hover{
-    transform: scale(1.1,1.1);
+.encabezado_redes_icon img{
+    transition: all 1s; 
+}
+
+.encabezado_redes_icon img:hover{
+    transform: scale(1.4,1.4);
 }
 /*------------------------ MAIN ------------------------------ */  
 
@@ -404,13 +410,51 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     border: 1px solid black;
     box-shadow: 1px -3px 5px black;
     background-image: url(../assets/img/background_encabezado.png);
     margin-top: 60px;
-    padding: 10px;
-
+    padding: 20px 50px;
 }
+
+.footer div{
+    width: 260px;
+    height: 100px;
+}
+
+.footer a img {
+    width: 45px;
+}
+
+.footer h5{
+    text-align: center;
+    border-radius: 10px;
+    border: 10px 10px 10px;
+    box-shadow: 1px 1px 10px black;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+.footer_contacto{
+    width: 200px;
+    height: 70px;
+    background-color: black;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.footer_contacto:hover{
+    background-color: blanchedalmond;
+    color: red;
+    font-size: 25px;
+    text-shadow: 1px 2px 1px black;
+}
+
 
 /*----------------------------------- RESPONSIVE DESIGN-------------------------*/
 @media screen and (min-width: 1001px) and (max-width: 1250px){
@@ -609,3 +653,5 @@ h1{
         padding-left: 25px;
     }
 }
+
+                
